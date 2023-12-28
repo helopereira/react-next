@@ -1,11 +1,9 @@
 import Caixa from "@/components/basicos/Caixa";
 
-export default function paginaCaixa(){
+export default function paginaCaixas(){
     return(
         <div className={`
-        flex flex-row
-        align-middle
-        justify-items-center
+        flex justify-center items-center h-screen
         g-7
         `}
         >
