@@ -15,7 +15,7 @@ export default function Pergunta(props: perguntaProps){
             <div className={`
                 bg-green-700 
                 flex justify-center items-center
-                text-2xl p-3`}
+                text-2xl p-3    `}
                 onClick={()=>setAberta(!aberta)}
                 >
                     {props.pergunta}
