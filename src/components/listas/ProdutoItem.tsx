@@ -17,7 +17,7 @@ export default function ProdutoItem(props: ProdutoItemProps){
             <div className='font-black text-pink-400 text-2xl'>R$ {produto.preco}</div>
         </div>
         <div className='text-zinc-500'>{produto.descricao}</div>
-        <button className="botao text-2xl p-1" onClick={()=>props.comprar(produto)}>Comprar</button>
+        <button className="botao text-2xl p-1" onClick={() => props.comprar(produto)}>Comprar</button>
     </div>
     )
 }
