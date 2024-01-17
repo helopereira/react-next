@@ -1,32 +1,26 @@
-import useProcessando from "@/data/hooks/useProcessamento";
+interface personagensProps{
+    personagens: any[]
+}
 
-export default function Personagens() {
-    const { processando, iniciarProcessamento, finalizarProcessamento } = useProcessando();
-
-    async function simularChamadaAPI() {
-        const resp = await fetch('https://swapi.dev/api/people/');
-        const dados = await resp.json();
-        console.log(dados.results);
-    }
-
-
-    async function obterPersonagens() {
-        try {
-            iniciarProcessamento();
-            await simularChamadaAPI();
-        } finally {
-            finalizarProcessamento();
-        }
+export default function Personagens(props: personagensProps) {
+    function renderizarPersonagens(){
+        return(
+            <div className={`
+            text-white
+            `}>
+                <ul>
+                    {props.personagens?.map((p: any) => (
+                        <li key={p.name}>{p.name}</li>
+                    ))}
+                 </ul>
+            </div>
+        
+        )
     }
 
     return (
         <div>
-            {processando ? (
-                <div>processando...</div>
-            ) : (
-                <h1>Conteúdo com os personagens</h1>
-            )}
-            <button onClick={obterPersonagens} className={`botao`}>Obter</button>
+            {renderizarPersonagens()}
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function useProcessamento(){
+export default function useProcessando(){
     const [processando, setProcessando] = useState<boolean>(false)
 
     function iniciarProcessamento(){
@@ -11,5 +11,10 @@ export default function useProcessamento(){
         setProcessando(false)
     }
 
+        return{
+            processando,
+            iniciarProcessamento,
+            finalizarProcessamento
+        }
 }
 
