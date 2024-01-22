@@ -18,11 +18,11 @@ export default function Filmes(props: FilmesProps) {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.filmes.map((p: any) => (
-                        <tr key={p.name} className="text-black text-center bg-zinc-400">
-                            <td className="">{p.title}</td>
-                            <td className="p-3">{p.episode_id}</td>
-                            <td className="p-3">{new Date(p.release_date).toLocaleDateString('pt-BR')}</td>
+                    {props.filmes.map((filme: any) => (
+                        <tr key={filme.title} className="text-black text-center bg-zinc-400">
+                            <td className="">{filme.title}</td>
+                            <td className="p-3">{filme.episode_id}</td>
+                            <td className="p-3">{new Date(filme.release_date).toLocaleDateString('pt-BR')}</td>
                         </tr>
                     ))}
                 </tbody>
