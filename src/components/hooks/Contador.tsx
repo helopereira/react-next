@@ -24,7 +24,6 @@ export default function Contador() {
                     -
                 </button>
                 <button className="botao" onClick={() => setValor((valorAtual) => valorAtual + delta)}>
-                    +
                 </button>
             </div>
             <input 
